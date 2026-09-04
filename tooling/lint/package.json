@@ -1,0 +1,15 @@
+{
+  "name": "@acme/lint",
+  "private": true,
+  "type": "module",
+  "files": [
+    "*.json"
+  ],
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo node_modules",
+    "format": "oxfmt --check . --ignore-path ../../.gitignore"
+  },
+  "devDependencies": {
+    "oxfmt": "catalog:"
+  }
+}

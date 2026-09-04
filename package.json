@@ -1,0 +1,43 @@
+{
+  "name": "create-t3-turbo",
+  "private": true,
+  "engines": {
+    "node": ">=22.20.0",
+    "pnpm": ">=10.15.1"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "scripts": {
+    "build": "turbo run build --filter=!@acme/expo",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo run clean",
+    "db:push": "turbo -F @acme/db push",
+    "db:studio": "turbo -F @acme/db studio",
+    "dev": "turbo watch dev --continue --filter=!@acme/expo",
+    "dev:next": "turbo watch dev -F @acme/nextjs...",
+    "format": "oxfmt \"**/*.{ts,tsx,md}\"",
+    "lint": "oxlint --type-aware --report-unused-disable-directives",
+    "lint:fix": "oxlint --type-aware --report-unused-disable-directives --fix",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
+    "postinstall": "pnpm lint:ws",
+    "test:nextjs": "pnpm -F @acme/nextjs test",
+    "typecheck": "turbo run typecheck",
+    "ui:add": "turbo run ui-add",
+    "android": "pnpm -F @acme/expo android",
+    "ios": "pnpm -F @acme/expo ios",
+    "dev:expo": "turbo -F @acme/expo dev",
+    "format:check": "oxfmt --check . --ignore-path .gitignore",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "@acme/oxfmt-config": "workspace:*",
+    "@turbo/gen": "^2.5.8",
+    "dotenv-cli": "^10.0.0",
+    "husky": "^9.1.7",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "turbo": "^2.5.8",
+    "typescript": "catalog:"
+  }
+}

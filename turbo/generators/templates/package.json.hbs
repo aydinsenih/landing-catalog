@@ -1,0 +1,21 @@
+{
+  "name": "@acme/{{ name }}",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "oxfmt --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@acme/tsconfig": "workspace:*",
+    "oxfmt": "catalog:",
+    "typescript": "catalog:"
+  }
+}

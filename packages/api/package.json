@@ -1,0 +1,33 @@
+{
+  "name": "@acme/api",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "oxfmt --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "test": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@acme/db": "workspace:*",
+    "@acme/service": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@acme/auth": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@vitest/coverage-v8": "catalog:",
+    "oxfmt": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

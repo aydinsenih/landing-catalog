@@ -1,0 +1,47 @@
+{
+  "name": "@acme/db",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "default": "./src/schema.ts"
+    },
+    "./repository": {
+      "types": "./dist/repository/index.d.ts",
+      "default": "./src/repository/index.ts"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "oxfmt --check . --ignore-path ../../.gitignore",
+    "push": "pnpm with-env drizzle-kit push",
+    "studio": "pnpm with-env drizzle-kit studio",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@acme/constants": "workspace:*",
+    "better-auth": "catalog:",
+    "drizzle-orm": "^0.44.6",
+    "drizzle-seed": "^0.3.1",
+    "drizzle-zod": "^0.8.3",
+    "postgres": "^3.4.5",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@acme/tsconfig": "workspace:*",
+    "@types/node": "^22.18.10",
+    "drizzle-kit": "^0.31.5",
+    "oxfmt": "catalog:",
+    "tsx": "^4.20.6",
+    "typescript": "catalog:"
+  }
+}

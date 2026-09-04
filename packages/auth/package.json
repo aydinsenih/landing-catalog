@@ -1,0 +1,31 @@
+{
+  "name": "@acme/auth",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./env": "./env.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "format": "oxfmt --check . --ignore-path ../../.gitignore",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@acme/db": "workspace:*",
+    "@better-auth/expo": "catalog:",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "better-auth": "catalog:",
+    "next": "^16.0.0",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@acme/tsconfig": "workspace:*",
+    "@types/react": "catalog:react19",
+    "oxfmt": "catalog:",
+    "typescript": "catalog:"
+  }
+}
