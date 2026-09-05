@@ -25,3 +25,21 @@
     letter-spacing: var(--tracking-normal);
   }
 }
+
+@keyframes split-wipe {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@utility split-wipe {
+  transform-origin: left;
+  animation: split-wipe 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}

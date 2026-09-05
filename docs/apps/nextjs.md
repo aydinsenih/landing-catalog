@@ -84,9 +84,13 @@ rule. [backend.md](backend.md) owns the API routes inside this app.
 3. Reach for a semantic token first, such as `bg-background` or
    `text-foreground`.
 4. Reach for `brand-*` or `accent-*` only when no semantic token fits.
-5. Ask the user to add a missing token to `theme.css` first.
-6. Style a third-party component through a wrapper of your own, and pass a CSS
+5. Add a missing token to `theme.css` before you use it.
+6. Write one comment line in the `index.ts` file of a landing page route for
+   each token that you add and use in that route.
+7. Style a third-party component through a wrapper of your own, and pass a CSS
    variable when it takes a raw color.
+8. route is landing/{design_name} you can name it after the design.
+9. new landing page to /landing index page as a accessable links.
 
 > A semantic token adapts to light and dark mode. A raw palette color does not,
 > and the bug appears only in the other theme. Tailwind v4 has no
