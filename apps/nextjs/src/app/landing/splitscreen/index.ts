@@ -6,9 +6,9 @@
 // --brand-split-c: the third share of a split, and the editor who holds it.
 // --font-display: the headline face, loaded by the layout of this route.
 
-export { LandingClose } from "~/app/_components/landing-demo1/landing-close";
-export { LandingFeatures } from "~/app/_components/landing-demo1/landing-features";
-export { LandingFooter } from "~/app/_components/landing-demo1/landing-footer";
-export { LandingHero } from "~/app/_components/landing-demo1/landing-hero";
-export { LandingNav } from "~/app/_components/landing-demo1/landing-nav";
-export { LandingTimeline } from "~/app/_components/landing-demo1/landing-timeline";
+export { LandingClose } from "~/app/_components/landing-splitscreen/landing-close";
+export { LandingFeatures } from "~/app/_components/landing-splitscreen/landing-features";
+export { LandingFooter } from "~/app/_components/landing-splitscreen/landing-footer";
+export { LandingHero } from "~/app/_components/landing-splitscreen/landing-hero";
+export { LandingNav } from "~/app/_components/landing-splitscreen/landing-nav";
+export { LandingTimeline } from "~/app/_components/landing-splitscreen/landing-timeline";

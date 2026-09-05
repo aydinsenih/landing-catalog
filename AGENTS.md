@@ -12,6 +12,7 @@ Edit this file, never `CLAUDE.md`.
 6. Never use a command to show the content of `.env`. Examples include `cat`, `grep`, `sed`, and `head`.
 7. Read `.env.example` when you must know the name of a variable.
 8. Ask the user for one value when `.env.example` is not sufficient.
+9. DO NOT WRITE TESTS for landing pages.
 
 ## What to read
 

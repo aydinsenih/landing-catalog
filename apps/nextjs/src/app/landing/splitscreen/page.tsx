@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { DEMO1_DESCRIPTION, DEMO1_TITLE } from "@acme/constants";
+import { SPLITSCREEN_DESCRIPTION, SPLITSCREEN_TITLE } from "@acme/constants";
 
 import {
   LandingClose,
@@ -9,14 +9,14 @@ import {
   LandingHero,
   LandingNav,
   LandingTimeline,
-} from "~/app/landing/demo1";
+} from "~/app/landing/splitscreen";
 
 export const metadata: Metadata = {
-  title: DEMO1_TITLE,
-  description: DEMO1_DESCRIPTION,
+  title: SPLITSCREEN_TITLE,
+  description: SPLITSCREEN_DESCRIPTION,
 };
 
-export default function LandingDemo1Page() {
+export default function LandingSplitscreenPage() {
   return (
     <>
       <LandingNav />

@@ -5,7 +5,7 @@ const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
 });
 
-export default function LandingDemo1Layout(props: {
+export default function LandingSplitscreenLayout(props: {
   children: React.ReactNode;
 }) {
   return <div className={bricolage.variable}>{props.children}</div>;
